@@ -1,5 +1,5 @@
-<div class="box">
-	<slot></slot>
+<div class="box" style="margin: 2em auto">
+	<slot />
 </div>
 
 <style>

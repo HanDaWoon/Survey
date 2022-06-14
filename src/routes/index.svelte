@@ -18,8 +18,12 @@
 	{#await survey}
 		<h3>Loading.getSurvey..</h3>
 	{:then survey_db}
-		{#each survey_db as { id, title }}
-			<Box>{id}님의 {title} 설문조사</Box>
+		{#each survey_db as sv_data}
+			<Box>
+				<a href="/survey/{sv_data.id}">
+					{sv_data.title}
+				</a>
+			</Box>
 		{/each}
 	{:catch error}
 		<p>{error.message}</p>
