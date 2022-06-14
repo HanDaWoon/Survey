@@ -1,13 +1,13 @@
 <script>
 	import 'carbon-components-svelte/css/white.css';
 	import Box from '$lib/Box.svelte';
-
 	async function getSurvey() {
 		let res = await fetch('http://php-server-ksu.run.goorm.io/PHP/', {});
 		let survey_db = await res.json();
 		return Object.values(survey_db);
 	}
-	const survey = getSurvey();
+	setInterval(getSurvey, 10000);
+	let survey = getSurvey();
 </script>
 
 <svelte:head>

@@ -48,7 +48,7 @@
 				{/each}
 			</div>
 			<div style="text-align:center">
-				<button class="button is-success" on:click={save_alert}>Success</button>
+				<button class="button is-success" on:click={save_alert}>저장</button>
 			</div>
 		</div>
 	</div>
